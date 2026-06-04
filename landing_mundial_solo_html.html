@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cuenta regresiva para el Mundial 2026">
+<title>Cuenta Regresiva Mundial 2026</title>
+</head>
+<body>
+
+<header>
+    <h1>⚽ Cuenta Regresiva Mundial 2026</h1>
+    <p>El torneo más esperado del planeta está por comenzar.</p>
+
+    <section id="countdown">
+        <div>
+            <h2 id="days">00</h2>
+            <p>Días</p>
+        </div>
+
+        <div>
+            <h2 id="hours">00</h2>
+            <p>Horas</p>
+        </div>
+
+        <div>
+            <h2 id="minutes">00</h2>
+            <p>Minutos</p>
+        </div>
+
+        <div>
+            <h2 id="seconds">00</h2>
+            <p>Segundos</p>
+        </div>
+    </section>
+
+    <a href="#suscripcion">Recibir novedades</a>
+</header>
+
+<main>
+
+<section>
+    <h2>¿Qué encontrarás?</h2>
+
+    <article>
+        <h3>Noticias</h3>
+        <p>Información actualizada sobre selecciones y partidos.</p>
+    </article>
+
+    <article>
+        <h3>Calendario</h3>
+        <p>Consulta fechas y horarios del torneo.</p>
+    </article>
+
+    <article>
+        <h3>Estadísticas</h3>
+        <p>Récords, jugadores y datos históricos.</p>
+    </article>
+
+    <article>
+        <h3>Sorteos</h3>
+        <p>Participa en promociones especiales.</p>
+    </article>
+</section>
+
+<section id="suscripcion">
+    <h2>Suscríbete</h2>
+    <p>Recibe novedades exclusivas del Mundial.</p>
+
+    <form>
+        <input type="email" placeholder="Correo electrónico" required>
+        <button type="submit">Suscribirme</button>
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Cuenta Regresiva Mundial</p>
+</footer>
+
+<script>
+const targetDate = new Date("June 11, 2026 00:00:00").getTime();
+
+setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+}, 1000);
+</script>
+
+</body>
+</html>
